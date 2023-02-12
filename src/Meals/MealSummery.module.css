@@ -1,0 +1,26 @@
+.summery{
+    width:50%;
+    height: 20%;
+    padding: 5px;
+    margin: -100px auto 0 auto;
+    background-color: cornsilk;
+    z-index: 10;
+   position: relative;
+   top: 10%;
+   border: rgba(230, 94, 94, 0.596) 1px groove;
+ border-radius: 30px;
+ box-shadow:  5px 5px 5px rgba(230, 94, 94, 0.596);
+
+}
+.summery h2{
+    font-size: 2.3rem;
+    font-weight: 900;
+    color: rgb(134, 57, 57);;
+    text-align: center;
+}
+.summery p{
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: rgb(134, 57, 57);;
+    text-align: center;
+}  

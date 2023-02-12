@@ -1,0 +1,18 @@
+.form{
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center ;
+}
+.form button{
+        padding:0 5px;  
+        margin: 4px; 
+        width:120px; 
+        background-color: rgb(242, 247, 255);
+        border:1px solid rgb(169, 194, 211);
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: rgb(42, 42, 59);
+}

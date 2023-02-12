@@ -1,0 +1,58 @@
+.item{
+    padding:10px;
+    margin: 0;
+    border-bottom: 2px rgb(90, 3, 3) solid;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.986);
+}
+.item h2{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(114, 85, 85);
+    padding: 0;
+    margin: 0;
+}
+.item p{
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    text-align:left;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+.price{
+    font-size: 1rem;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    padding: 0;
+    margin: 0;
+}
+.amount{
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center ;
+}
+.amount button{
+  padding:0 5px;  
+  margin: 4px; 
+  width:80px; 
+  background-color: rgb(242, 247, 255);
+  border:1px solid rgb(169, 194, 211);
+  border-radius: 5px;
+  font-size: 1rem;
+
+}
+.price button{
+    margin-left: 10px;
+    font-size: .9 rem;
+    background-color: rgb(253, 253, 253);
+    border-radius: 5px;
+    font-weight: 700;
+    border: 1px solid rgb(141, 141, 228);
+}
+

@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import CartContext from "../store/cart-context";
-import { useContext } from "react";
+import React,{ useContext } from "react";
 import CartItems from "./CartItems";
 const Cart = (props) => {
   const ctx = useContext(CartContext);

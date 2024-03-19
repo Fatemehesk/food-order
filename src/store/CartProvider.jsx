@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import CartContext from "./cart-context";
-import { useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 const cartReducer = (state, action) => {
   if (action.type === "Add") {
     const updatedTotalAmount =
@@ -54,6 +55,29 @@ const CartProvider = (props) => {
     cartReducer,
     defaultCartState
   );
+  const [searchParam, setSearchParam] = useState("");
+  const [mealsList, setMealsList] = useState([]);
+const setSeachParamHandler=(prop)=>{
+  console.log(prop,"prop");
+  setSearchParam(prop);
+}
+
+useEffect(()=>{searchHandler('pizza')},[])
+  const searchHandler = async (param) => {
+    try {
+      console.log(searchParam,"param");
+      if (param) {
+        const res = await fetch(
+          `https://forkify-api.herokuapp.com/api/search?q=${param}`
+        );
+        const data = await res.json();
+        console.log(data);
+        setMealsList(data.recipes);
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
   const addItemToCartHandler = (item) => {
     dispatchCartAction({
       type: "Add",
@@ -69,8 +93,12 @@ const CartProvider = (props) => {
   const cartContext = {
     items: cartState.items,
     totalAmount: cartState.totalAmounts,
+    searchParams: searchParam,
+    mealsLists:mealsList,
+    setSeachParamHandler: setSeachParamHandler,
     addItem: addItemToCartHandler,
     removeItem: removeItemHandler,
+    handleSearch: searchHandler,
   };
   return (
     <CartContext.Provider value={cartContext}>

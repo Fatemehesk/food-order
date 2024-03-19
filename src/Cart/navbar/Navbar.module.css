@@ -1,0 +1,19 @@
+.nav{
+
+    display: flex;
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: end;
+    gap: 1rem;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+}
+  

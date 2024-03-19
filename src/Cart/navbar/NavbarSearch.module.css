@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 10rem;
+    .input {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+      }
+      
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      
+      .button button {
+        padding: 8px 16px;
+        background-color: #64d380;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .button button:hover {
+        background-color: #47965b;
+        ;
+      }
+  }
+  
+  

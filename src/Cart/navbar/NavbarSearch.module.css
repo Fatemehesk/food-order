@@ -14,7 +14,25 @@
         border-radius: 5px;
         margin-right: 10px;
       }
-      
+      .dropdown{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        ul{
+         position: absolute;
+         display: flex;
+         flex-direction: column;
+         top:33px;
+         justify-content: flex-start;
+         background-color: #96b7dd;
+         align-items: flex-start;
+         width:75%;
+li{
+  color: #fff;
+ cursor: pointer;
+}
+        }
+      }
       .button button {
         padding: 8px 16px;
         background-color: #64d380;

@@ -19,9 +19,10 @@ const MealLists = (props) => {
   };
   console.log(props.id);
   return (
-    <Link to={`/items/${props.id}`} className={classes.card}>
+    <div className={classes.card}>
       <div className={classes.image}>
-        <img src={props.imgUrl} alt={props.name} />
+      <Link to={`/items/${props.id}`}>
+        <img src={props.imgUrl} alt={props.name} /></Link>
       </div>
       <div>
         <h3>{props.name}</h3>
@@ -31,7 +32,7 @@ const MealLists = (props) => {
 
         <AddItems onAddToCart={itemAddtoCartHandler} />
       </div>
-    </Link>
+    </div>
   );
 };
 export default MealLists;

@@ -11,14 +11,14 @@ const HeaderCartButton = (props) => {
     return currentNumber + item.amount;
   }, 0);
   return (
-    <div  className={classes.container} >
-
-      <button className={classes.button} onClick={props.onClick}><span className={classes.icon}>
-        <CartIcon />
-      </span>
-      <span>Your Cart</span>
-      <span className={classes.badge}>{numberOfCartItems}</span></button>
-      
+    <div className={classes.container}>
+      <button className={classes.button} onClick={props.onClick}>
+        <span className={classes.icon}>
+          <CartIcon />
+        </span>
+        <span>Your Cart</span>
+        <span className={classes.badge}>{numberOfCartItems}</span>
+      </button>
     </div>
   );
 };

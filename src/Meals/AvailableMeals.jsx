@@ -39,7 +39,7 @@ const AvailableMeals = () => {
             key={item.recipe_id}
             id={item.recipe_id}
             name={item.title}
-            price={Math.floor(item.social_rank / (Math.random()*30))}
+            price={Math.floor(item.social_rank / 10)}
             imgUrl={item.image_url}
             description={item.description}
           />

@@ -1,16 +1,19 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import React, { useContext, useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "../navbar/NavbarSearch.module.css";
-import CartContext from "../../store/cart-context";
+import {useDatabaseStore} from "../../store/database/database.store";
 import { foodItems } from "./utils/items";
 const SearchNavbar = () => {
-  const ctx = useContext(CartContext);
+  const { handleSearch } = useDatabaseStore();
+  const [searchParams, setSeachParam] = useState([]);
   const [meal, setMeal] = useState("");
   const [showDropDown, setShowDropDown] = useState(true);
   const [matchedMeals, setMatchedMeals] = useState([]);
-
+  useEffect(() => {
+    handleSearch("pizza");
+  }, []);
   const serchMealHandler = (event) => {
     const query = event.target.value.toLowerCase(); // Convert the query to lowercase
     setMeal(query);
@@ -25,6 +28,7 @@ const SearchNavbar = () => {
       setMatchedMeals([]);
     }
   };
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.input}>
@@ -34,9 +38,9 @@ const SearchNavbar = () => {
             type="text"
             className={classes.input}
             placeholder="serch your desire meal"
-            value={ctx.searchParams}
+            value={searchParams}
             onChange={(e) => {
-              ctx.setSeachParamHandler(e.target.value);
+              setSeachParam(e.target.value);
               serchMealHandler(e);
             }}
           />
@@ -47,8 +51,8 @@ const SearchNavbar = () => {
                   <li
                     key={index}
                     onClick={() => {
-                      ctx.handleSearch(item);
-                      ctx.setSeachParamHandler(item);
+                      handleSearch(item);
+                      setSeachParam(item);
                       setShowDropDown(false);
                     }}
                   >
@@ -67,8 +71,7 @@ const SearchNavbar = () => {
             className="btn btn-primary"
             type="button"
             onClick={() => {
-              console.log(ctx.searchParams, "search");
-              ctx.handleSearch(ctx.searchParams);
+              handleSearch(searchParams);
               setShowDropDown(false);
             }}
           >

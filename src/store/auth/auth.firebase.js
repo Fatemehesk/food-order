@@ -1,4 +1,4 @@
-* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars */
 import { signInWithPopup, signOut, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebase";
 

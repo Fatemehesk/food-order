@@ -1,11 +1,12 @@
 import {AuthContext} from "../store/auth-context";
 import React, { useContext } from "react";
+import classes from "./auth.module.css";
 
 const Login = () => {
   const { login, currentUser } = useContext(AuthContext);
   return (
-   <>{!currentUser && (
-    <button type="button" className="btn btn-warning" onClick={login}>
+   <>{currentUser === null && (
+    <button type="button" className={classes.logout} onClick={login}>
       Login
     </button>
   )}</> 

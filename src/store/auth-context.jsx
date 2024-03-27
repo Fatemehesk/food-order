@@ -7,14 +7,14 @@ export const AuthContext = createContext({
   login:() => {},
         logout:() => {},
         authenticate: () => {},
-        currentUser:'',
+        currentUser:" ",
 });
 
 const AuthProvider = (props) => {
   const [currentUser, setCurrentUser] = useState(null);
 
-  const login = () => signInWithGoogle()?.then(setCurrentUser);
-  const logout = () => handleSignOut()?.then(() => setCurrentUser(null));
+  const login = () => signInWithGoogle()?.then((res)=>{setCurrentUser(res.displayName)});
+  const logout = () => handleSignOut()?.then(() => {setCurrentUser(null)});
   const authenticate = () => getCurrentUser().then(setCurrentUser);
   const authValue = useMemo(
     () => {

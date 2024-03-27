@@ -9,6 +9,7 @@ import HeaderCartButton from "./Layout/HeaderCartButton";
 import classes from './Layout/Header.module.css';
 import Navbar from "./Cart/Navbar/Navbar";
 import Login from "./auth/Login";
+import Logout from "./auth/Logout";
 import AuthProvider from "./store/auth-context";
 
 function App() {
@@ -27,6 +28,7 @@ const showCartHandler = () => {
                 
                 <Navbar/>
                 <Login/>
+                <Logout/>
                <HeaderCartButton onClick={showCartHandler}/>
             </header>
       <Routes>

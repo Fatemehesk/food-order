@@ -17,7 +17,7 @@ const MealLists = (props) => {
       name: props.name,
     });
   };
-  console.log(props.id);
+
   return (
     <div className={classes.card}>
       <div className={classes.image}>

@@ -57,15 +57,16 @@ const CartProvider = (props) => {
   );
   const [searchParam, setSearchParam] = useState("");
   const [mealsList, setMealsList] = useState([]);
-const setSeachParamHandler=(prop)=>{
-  console.log(prop,"prop");
-  setSearchParam(prop);
-}
+  const setSeachParamHandler = (prop) => {
+    console.log(prop, "prop");
+    setSearchParam(prop);
+  };
 
-useEffect(()=>{searchHandler('pizza')},[])
+  useEffect(() => {
+    searchHandler("pizza");
+  }, []);
   const searchHandler = async (param) => {
     try {
-      console.log(searchParam,"param");
       if (param) {
         const res = await fetch(
           `https://forkify-api.herokuapp.com/api/search?q=${param}`
@@ -94,7 +95,7 @@ useEffect(()=>{searchHandler('pizza')},[])
     items: cartState.items,
     totalAmount: cartState.totalAmounts,
     searchParams: searchParam,
-    mealsLists:mealsList,
+    mealsLists: mealsList,
     setSeachParamHandler: setSeachParamHandler,
     addItem: addItemToCartHandler,
     removeItem: removeItemHandler,

@@ -5,21 +5,26 @@ import { auth } from "../../firebase";
 const googleProvider = new GoogleAuthProvider()
 
 const FirebaseAuth = {
-   signInWithGoogle:async () => {
-        try {
-        const res=  await signInWithPopup(auth, googleProvider);
-        } catch (error) {
-          console.error("Error signing in with Google:", error);
-        }
-      },
-   handleSignOut:  () => {
-        signOut(auth)
-        .then(() => console.log("user logged out"))
-        .catch(console.error)
+   signInWithGoogle:() => {
+    return new Promise(resolve => {
+        signInWithPopup(auth, googleProvider)
+        .then(response => {
+            resolve(response.user);
+        }) 
+        .catch(console.error);
+    })
+}, 
+   handleSignOut:  async() => {
+    try {
+        await signOut(auth);
+        console.log("user logged out");
+    } catch (error) {
+        console.error(error);
+    }
     },
      getCurrentUser: () => {
         return new Promise(resolve => {
-            return auth.onAuthStateChanged(resolve)
+            return auth.onAuthStateChanged(resolve);
         }
         )
     }

@@ -30,7 +30,7 @@ import MealLists from "./MealLists";
 // ];
 const AvailableMeals = () => {
   const {mealsLists}=useContext(CartContext);
-  console.log(mealsLists);
+
   return (
     <section >
       <div className={classes.meals} >

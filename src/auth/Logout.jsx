@@ -1,18 +1,18 @@
-
-import {AuthContext} from "../store/auth-context";
-import React, { useContext, useEffect } from "react";
+import { useAuthState } from "../store/auth/auth.store";
+import React from "react";
 import classes from "./auth.module.css";
 
 const Logout = () => {
-  const { logout, currentUser } = useContext(AuthContext);
-  console.log(currentUser,"logout");
-  useEffect(()=>{},[]);
+  const { logout, currUser } = useAuthState();
+
   return (
-   <>{currentUser !== null && (
-    <button type="button" className={classes.logout}  onClick={logout}>
-      Logout 
-    </button>
-  )}</> 
+    <>
+      {currUser !== null && (
+        <button type="button" className={classes.logout} onClick={logout}>
+          Logout
+        </button>
+      )}
+    </>
   );
 };
 export default Logout;

@@ -1,6 +1,11 @@
 /* eslint-disable react/prop-types */
+/*==============================================
+ NOTE: 
+ THE FOLLOWING COMPONENT PREVIOUSLY USED FOR AUTHENTICATION STATE MANAGEMENT.
+ NOW, ZUSTAND IS USED INSTEAD FOR IMPROVED STATE MANAGEMENT..*/
+ 
 import React,{ createContext, useMemo, useState } from "react";
-import FirebaseAuth from "../auth/handlers/auth";
+import FirebaseAuth from "../auth/auth.firebase";
 
 const { signInWithGoogle, handleSignOut, getCurrentUser } = FirebaseAuth;
 export const AuthContext = createContext({

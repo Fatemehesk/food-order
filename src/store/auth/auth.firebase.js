@@ -30,10 +30,3 @@ const FirebaseAuth = {
     }
 }
 export default FirebaseAuth;
-//     getCurrentUser: () => {
-//         return new Promise(resolve => {
-//             return auth.onAuthStateChanged(resolve)
-//         })
-//     }
-// }
-// export default FirebaseAuth

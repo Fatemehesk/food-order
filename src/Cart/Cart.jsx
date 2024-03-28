@@ -1,33 +1,25 @@
 /* eslint-disable react/prop-types */
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
-import CartContext from "../store/cart-context";
-import React,{ useContext } from "react";
+import React from "react";
 import CartItems from "./CartItems";
+import { useCartStore } from "../store/Cart/cart.store";
+
 const Cart = (props) => {
-  const ctx = useContext(CartContext);
+  const { totalAmount, items } = useCartStore();
+  const CtxTotalAmount = `$${totalAmount.toFixed(2)}`;
+  const hasItem = items.length > 0;
 
-  
-  const CtxTotalAmount = `$${ctx.totalAmount.toFixed(2)}`;
-  const hasItem = ctx.items.length> 0;
-
-  const cardItemAddHandler=(item)=>{
-    ctx.addItem({...item, amount:1});
-  };
-  const cardItemRemoveHandler=(id)=>{
-    ctx.removeItem(id);
-  };
   const Card_Items = (
     <ul className={classes["card_items"]}>
-      {ctx.items.map((item) => {
+      {items.map((item) => {
         return (
           <CartItems
+          id={item.id}
             name={item.name}
             price={item.price}
             amount={item.amount}
             key={item.id}
-            onAdd={cardItemAddHandler.bind(null,item)}
-            onRemove={cardItemRemoveHandler.bind(null,item.id)}
           />
         );
       })}
@@ -43,7 +35,7 @@ const Cart = (props) => {
       </div>
       <div className={classes.actions}>
         {hasItem && <button className={classes["button--alt"]}>Order</button>}
-        <button className={classes.button} onClick={props.onClose}>
+        <button className={classes.button} onClick={() => props.onClose(false)}>
           close
         </button>
       </div>
@@ -51,11 +43,3 @@ const Cart = (props) => {
   );
 };
 export default Cart;
-//Javascripts $ function is used to call functions/variables inside a string without using concatenations
-//let variableExample = 10;
-
-//let result = `${variableExample} text`;
-
-//console.log(result);
-//output = 10 text
-//this only works with backtick (` `) and not with single or double quotes

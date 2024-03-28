@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import classes from './Modal.module.css';
-import { Fragment } from 'react';
+import React,{ Fragment } from 'react';
 import ReactDOM from "react-dom";
 
 const BackDrop=(prop)=>{

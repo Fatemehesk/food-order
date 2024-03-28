@@ -4,15 +4,25 @@
         flex-direction: column;
         justify-content:space-around;
         align-items: center ;
+      
 }
-.form button{
-        padding:0 5px;  
-        margin: 4px; 
-        width:120px; 
+.form button {
+        padding: 0 5px;
+        margin: 4px;
+        width: 120px;
         background-color: rgb(242, 247, 255);
-        border:1px solid rgb(169, 194, 211);
+        border: 1px solid rgb(169, 194, 211);
         border-radius: 5px;
         font-size: 1rem;
         font-weight: 700;
         color: rgb(42, 42, 59);
-}
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease; /* Add transform transition */
+      }
+      .form button:hover {
+        background-color: #96b7dd; /* Change color on hover */
+      }
+      
+      .form button:active {
+        transform: scale(0.95); /* Shrink the button when active (clicked) */
+      }

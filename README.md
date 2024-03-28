@@ -7,7 +7,8 @@ This project is a React application for ordering food, utilizing the Forkify API
 - Main page with a search bar to search for meals
 - Detailed page for each meal with more information
 - Utilizes the Forkify API for fetching data
-- Uses useContext for global state management
+- using CSS Modules to style the components
+- zustand is used for improved state management.
 
 ## Setup
 
@@ -33,3 +34,4 @@ To use the application:
 - JavaScript
 - Forkify API
 - CSS Modules
+- Zustand

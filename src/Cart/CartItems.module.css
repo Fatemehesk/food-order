@@ -1,7 +1,7 @@
 .item{
     padding:10px;
     margin: 0;
-    border-bottom: 2px rgb(90, 3, 3) solid;
+    border-bottom: 1px #96b7dd solid;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
@@ -9,9 +9,9 @@
     background-color: rgba(255, 255, 255, 0.986);
 }
 .item h2{
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: rgb(114, 85, 85);
+    font-size: 1rem;
+    font-weight: 700;
+    color:#000000;
     padding: 0;
     margin: 0;
 }
@@ -25,7 +25,7 @@
 }
 .price{
     font-size: 1rem;
-    font-weight: 800;
+    font-weight: 700;
     color: rgb(0, 0, 0);
     padding: 0;
     margin: 0;
@@ -45,14 +45,22 @@
   border:1px solid rgb(169, 194, 211);
   border-radius: 5px;
   font-size: 1rem;
+  cursor: pointer;
 
 }
+.amount button:hover {
+    background-color: #96b7dd; /* Change color on hover */
+  }
+  .amount button:active {
+    transform: scale(0.95); /* Change color on hover */
+  }
 .price button{
     margin-left: 10px;
     font-size: .9 rem;
-    background-color: rgb(253, 253, 253);
+    background-color: #0056b3;
     border-radius: 5px;
-    font-weight: 700;
+    font-weight:500;
+    color: #fff;
     border: 1px solid rgb(141, 141, 228);
 }
 

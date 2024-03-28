@@ -3,17 +3,17 @@
 import React from "react";
 import classes from "./MealList.module.css";
 import AddItems from "./AddItems";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import CartContext from "../store/cart-context";
+import { useCartStore } from "../store/Cart/cart.store";
 
 const MealLists = (props) => {
-  const ItemCtx = useContext(CartContext);
-  const itemAddtoCartHandler = (amount) => {
-    ItemCtx.addItem({
+  const { addItem } = useCartStore();
+  const itemAddtoCartHandler = (amounts) => {
+    console.log(amounts,"amount test", props.name);
+   addItem({
       id: props.id,
-      price: props.price,
-      amount: amount,
+      price: Number(props.price),
+      amount: amounts,
       name: props.name,
     });
   };

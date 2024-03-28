@@ -8,7 +8,6 @@ export const useDatabaseStore = create((set) => ({
           `https://forkify-api.herokuapp.com/api/search?q=${param}`
         );
         const data = await res.json();
-        console.log(data);
         set({ mealsLists: data.recipes });
       }
     } catch (e) {

@@ -30,12 +30,14 @@ export const useCartStore = create((set) => ({
       const existingCartItemIndex = state.items.findIndex(
         (item) => item.id === data.id
       );
+      console.log(data,"data",existingCartItemIndex);
       if (existingCartItemIndex === -1) {
         return state; // Item not found, return current state
       }
+   
       const existingCartItem = state.items[existingCartItemIndex];
       const updatedTotalAmount =
-        state.totalAmount - existingCartItem.price * existingCartItem.amount;
+        state.totalAmount - existingCartItem.price ;
 
       let updatedItems;
       if (existingCartItem.amount === 1) {

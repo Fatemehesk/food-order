@@ -12,7 +12,7 @@ const AddItems = (props) => {
     if (
       AmountValue.trim().length === 0 ||
       EnteredAmountNumber < 1 ||
-      EnteredAmountNumber > 5
+      EnteredAmountNumber > 15
     ) {
       setAmountIsValid(false);
       return;
@@ -28,12 +28,12 @@ const AddItems = (props) => {
           id: "amount",
           type: "number",
           min: "1",
-          max: "5",
+          max: "15",
           defaultValue: 1,
         }}
       />
       <button>+Add</button>
-      {!amountIsValid && <p>please enter valid number between 1 to 5</p>}
+      {!amountIsValid && <p>please enter valid number between 1 to 15</p>}
     </form>
   );
 };

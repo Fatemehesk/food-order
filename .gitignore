@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 # api keys
 .env
+# Firebase Firestore security rules
+database.rules.json

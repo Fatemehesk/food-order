@@ -48,4 +48,9 @@ li{
       }
   }
   
-  
+  @media (max-width: 768px) {
+    .wrapper {
+      margin-left: auto;
+    }
+    }
+    

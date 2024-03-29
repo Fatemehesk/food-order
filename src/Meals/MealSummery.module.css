@@ -6,14 +6,17 @@
   border: #5a88b3 3px solid;
   z-index: 1;
 }
+@media (max-width: 920px) {
+  .wrapper {
+    width: 100%;
+  }
+}
 .layer {
-  
   width: 100%;
   height: 18rem;
   z-index: 10;
   filter: blur(15px);
   margin: 0 auto;
-
 }
 .summery {
   width: 96%;
@@ -22,17 +25,13 @@
   top: 2%;
   left: 2%;
   /* background-color: #98bee9c2; */
- 
   border-radius: 6px;
   z-index: 100;
-  
-
-  
 }
 .summery h2 {
   font-size: 2.3rem;
   font-weight: 900;
-  color: rgb(86, 25, 139);
+  color: #002c5a;
   text-align: center;
 }
 .summery p {
@@ -41,4 +40,31 @@
   color: rgb(86, 25, 139);
   text-align: center;
   z-index: 100;
+}
+@media (max-width: 1490px) {
+  .wrapper {
+    width: 90%;
+  }
+  .summery p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .summery {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .summery p {
+    margin-top: 0;
+  }
+  .summery h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+  p:nth-child(2) {
+    display: none;
+  }
 }

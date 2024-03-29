@@ -36,3 +36,11 @@
   font-size: 12px;
   margin-left: 6px;
 }
+@media (max-width: 540px) {
+  .container {
+    position: absolute;
+    top: 100%;
+  right: 0;
+  }
+  }
+  

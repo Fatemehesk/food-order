@@ -36,3 +36,4 @@ To use the application:
 - Forkify API
 - CSS Modules
 - Zustand
+- Firebase

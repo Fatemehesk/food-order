@@ -11,7 +11,7 @@ const Navbar = () => {
       <ul>
         <li>
           <NavLink to={"/"}>
-            <h1>React Meals</h1>
+            <h1>MealMate</h1>
           </NavLink>
         </li>
         <li>

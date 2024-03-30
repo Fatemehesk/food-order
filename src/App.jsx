@@ -11,7 +11,13 @@ import Logout from "./auth/Logout";
 
 function App() {
 
-
+    const handleScrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    };
+  
   return (
     <>
       <header className={classes.header}>
@@ -19,7 +25,7 @@ function App() {
                 <Navbar/>
                 <Login/>
                 <Logout/>
-               <HeaderCartButton/>
+               <HeaderCartButton handleScroll={handleScrollToTop}/>
             </header>
       <Routes>
         <Route path='/' element={<HomePage />}/>

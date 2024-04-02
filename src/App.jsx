@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/index";
 import FavoritMeals from "./pages/favorits/index";
+import Profile from "./pages/profile/Profile";
 import MealsDetail from "./pages/detail/index";
 import HeaderCartButton from "./Layout/HeaderCartButton";
 import classes from './Layout/Header.module.css';
@@ -31,6 +32,7 @@ function App() {
         <Route path='/' element={<HomePage />}/>
         <Route path='/favorits' element={<FavoritMeals/>}/>
         <Route path='/items/:id' element={<MealsDetail/>}/>
+        <Route  path='/:slug' element={<Profile/>}/>
       </Routes>
     
     </>

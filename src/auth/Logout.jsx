@@ -3,11 +3,11 @@ import React from "react";
 import classes from "./auth.module.css";
 
 const Logout = () => {
-  const { logout, currUser } = useAuthState();
+  const { logout,  username } = useAuthState();
 
   return (
     <>
-      {currUser !== null && (
+      { username !== null && (
         <button type="button" className={classes.logout} onClick={logout}>
           Logout
         </button>

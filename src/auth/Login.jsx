@@ -2,10 +2,10 @@ import React from "react";
 import classes from "./auth.module.css";
 import { useAuthState } from "../store/auth/auth.store";
 const Login = () => {
-  const { login, currUser } = useAuthState();
+  const { login,  username } = useAuthState();
   return (
     <>
-      {currUser === null && (
+      { username === null && (
         <button type="button" className={classes.logout} onClick={login}>
           Login
         </button>

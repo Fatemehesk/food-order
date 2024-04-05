@@ -2,8 +2,8 @@ import React from "react";
 import { useAuthState } from "../../store/auth/auth.store";
 import classes from "./Profile.module.css";
 const Profile = () => {
-    const { username, email, phoneNumber, uid, photoURL } = useAuthState();
-    console.log(username, email, phoneNumber, uid, photoURL);
+    const { username, email,photoURL } = useAuthState();
+
     return (
       <>
         <section className={classes.profile}>

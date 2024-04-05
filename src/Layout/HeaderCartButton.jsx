@@ -27,7 +27,7 @@ console.log(username, email, phoneNumber, uid, photoURL);
           <span>Your Cart</span>
           <span className={classes.badge}>{numberOfCartItems}</span>
         </div>
-        {username && <span>{username}</span>}
+        {/* {username && <span>{username}</span>} */}
       </button>
       {cartIsShown && <Cart onClose={setCartIsShown} />}
     </div>

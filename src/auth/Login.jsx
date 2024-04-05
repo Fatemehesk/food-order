@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <>
       { username === null && (
-        <button type="button" className={classes.logout} onClick={login}>
+        <button type="button" className={classes.login} onClick={login}>
           Login
         </button>
       )}

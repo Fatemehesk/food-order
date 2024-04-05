@@ -1,25 +1,55 @@
-.logout{
-    position: relative;
-    margin-left: auto;
-    background-color: #0056b3;
-    color:#fff;
-    padding: .5rem;
-border-radius: 19px;
-margin-right: .5rem;
-border: #0056b3;
-cursor: pointer;
+.logout,.login {
+  position: relative;
+
+  background-color: #0056b3;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 19px;
+  height: 2rem;
+  border: #0056b3;
+  cursor: pointer;
 }
 .login{
-    position: relative;
     margin-left: auto;
+  margin-right: 0.5rem;  
 }
 @media (max-width: 540px) {
-    .login {
-     margin-right: 1.5rem;
+  .login {
+    margin-right: 1.5rem;
+  }
+  .logout {
+    margin-right: 1.5rem;
+  }
+}
+.user {
+  display: flex;
+  margin-left: auto;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+.logo {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: rgb(85, 26, 139);
+  border: 2px solid #cdbdbd;
+  border-radius: 50%;
+}
+.logo__letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
 
-    }
-    .logout{
-        margin-right: 1.5rem;
-    }
-    }
-    
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+.logo__letter span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}

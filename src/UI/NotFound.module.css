@@ -1,0 +1,10 @@
+.wrapper{
+    width: 20%;
+    margin:5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h1{
+        color:rgb(85, 26, 139) ;
+    }
+}

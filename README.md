@@ -10,6 +10,7 @@ This project is a React application for ordering food, utilizing the Forkify API
 - using CSS Modules to style the components
 - zustand is used for improved state management.
 - Firebase is used for authentication
+- React Router v6 for routing
 
 ## Setup
 

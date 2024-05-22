@@ -1,7 +1,7 @@
 # React Order food Project
 
 This project is a React application for ordering food, utilizing the Forkify API. It features a main page with a search bar for finding meals and a detailed page for each meal with more information. Global state management is achieved using Zustand, and Firebase is used for authentication
- live version: https://food-order-app-43b8d.web.app/
+Check out the live demo: [here](https://food-order-app-43b8d.web.app/)
 ## Features
 
 - Main page with a search bar to search for meals
